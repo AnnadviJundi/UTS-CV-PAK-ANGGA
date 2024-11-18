@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Pengenalan Pemrograman</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --bg-color: #ecf0f1;
+            --section-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin: 1rem 0;
+            padding: 0.8rem 1.2rem;
+            background: rgba(52, 152, 219, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        ul li:hover {
+            background: rgba(52, 152, 219, 0.1);
+            transform: translateX(10px);
+        }
+
+        nav {
+            background: var(--primary-color);
+            padding: 0.01rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover {
+            background: var(--secondary-color);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            background: var(--section-bg);
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            color: var(--primary-color);
+            margin: 3rem 0;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .level-info {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 8px;
+        }
+
+        .level-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="matakuliah.html">Mata Kuliah</a></li>
+            <li><a href="pemrograman.html" class="active">MK Pengenalan Pemrograman</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Pengenalan Pemrograman</h1>
+
+        <div class="section">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Materi</th>
+                        <th>Level Pemahaman</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML Element</td>
+                        <td>4</td>
+                        <td>Mampu membuat dan mengimplementasikan element HTML dalam berbagai kasus</td>
+                    </tr>
+                    <tr>
+                        <td>HTML Tags</td>
+                        <td>4</td>
+                        <td>Paham penggunaan berbagai tags HTML dan implementasinya</td>
+                    </tr>
+                    <tr>
+                        <td>HTML Atribut</td>
+                        <td>4</td>
+                        <td>Sudah mencoba membuat program dengan berbagai atribut HTML</td>
+                    </tr>
+                    <tr>
+                        <td>PHP Awal dan XAMPP</td>
+                        <td>3</td>
+                        <td>Sudah membuat program PHP sederhana dengan XAMPP</td>
+                    </tr>
+                    <tr>
+                        <td>Variabel dan Tipe Data</td>
+                        <td>3</td>
+                        <td>Mengerti konsep variabel dan tipe data tapi belum banyak praktek</td>
+                    </tr>
+                    <tr>
+                        <td>Operator</td>
+                        <td>3</td>
+                        <td>Paham cara kerja operator tapi masih perlu latihan</td>
+                    </tr>
+                    <tr>
+                        <td>if else looping</td>
+                        <td>3</td>
+                        <td>Baru mengenal konsep dasar if else dan looping</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="level-info">
+                <h3>Keterangan Level:</h3>
+                <p>0 - Tidak tahu</p>
+                <p>1 - Tahu tapi belum mengerti</p>
+                <p>2 - Mengerti tapi belum dipraktekkan</p>
+                <p>3 - Sudah dipraktekkan tapi belum paham</p>
+                <p>4 - Paham sehingga bisa dibuat ulang dalam kasus yang berbeda</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

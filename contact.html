@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --bg-color: #ecf0f1;
+            --section-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #bdc3c7 100%);
+            color: var(--text-color);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin: 1rem 0;
+            padding: 0.8rem 1.2rem;
+            background: rgba(52, 152, 219, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        ul li:hover {
+            background: rgba(52, 152, 219, 0.1);
+            transform: translateX(10px);
+        }
+
+        nav {
+            background: var(--primary-color);
+            padding: 0.01rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover {
+            background: var(--secondary-color);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            color: var(--primary-color);
+            margin: 3rem 0;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: rgba(52, 152, 219, 0.08);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(52, 152, 219, 0.1);
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            background: rgba(52, 152, 219, 0.12);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            margin-right: 1.5rem;
+            color: var(--secondary-color);
+            background: rgba(52, 152, 219, 0.15);
+            padding: 1rem;
+            border-radius: 50%;
+        }
+
+        .contact-item h3 {
+            color: var(--primary-color);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .support-by {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(52, 152, 219, 0.05);
+            border-radius: 15px;
+        }
+
+        .support-by img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .support-by h3 {
+            color: var(--primary-color);
+            margin: 1rem 0;
+            font-size: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(52, 152, 219, 0.1);
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: rgba(52, 152, 219, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-links a i {
+            font-size: 1.5rem;
+        }
+
+        .social-links a:hover {
+            color: white;
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 2rem;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="matakuliah.html">Mata Kuliah</a></li>
+            <li><a href="pemrograman.html">MK Pengenalan Pemrograman</a></li>
+            <li><a href="contact.html" class="active">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Kontak Saya</h1>
+
+        <div class="section">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p><a href="https://annadvijundi16@gmail.com" target="_blank">annadvijundi16@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/6285748030969" target="_blank">+62 857-4803-0969</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Alamat</h3>
+                        <p>Kecamatan Sumobito, Kabupaten Jombang, Jawa Timur</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-by">
+                <img src="imphnen 2.png" alt="Support By" style="width: 300px; height: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 8px;">
+                <h3>Support By</h3>
+                <p>Ingin Menjadi Programmer Handal, Namun Enggan Ngoding</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/AnnadviJundi"><i class="fab fa-github"></i> Github</a>
+                <a href="https://www.instagram.com/annadvi_jundi/"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/in/annadvi-jundi-247b8028b/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
